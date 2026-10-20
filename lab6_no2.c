@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <locale.h>
 
@@ -7,12 +7,9 @@ int main() {
     double x, y;
 
     printf("Введите координаты x и y: ");
-    if (scanf("%lf %lf", &x, &y) != 2) {
-        printf("Ошибка: нужно ввести два числа\n");
-        return 1;
-    }
+    scanf("%lf %lf", &x, &y);
 
-    if (x * x + (y + 2) * (y + 2) <= 49 && !(x * x + (y + 5) * (y + 5) < 64) && y >= 0) {
+    if (x * x + y * y <= 36 && !(x * x + y * y < 16) && y >= 2) {
         printf("Точка принадлежит области\n");
     }
     else {
